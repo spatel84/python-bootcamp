@@ -3,13 +3,14 @@
 
 ### Day 1
 - 🥋 Katas:
-  - `is_even` → Status: [ ]
-  - `reverse_string` → Status: [ ]
-  - `fizzbuzz` → Status: [ ]
+  - `is_even` → Status: [✅]
+  - `reverse_string` → Status: [✅]
+  - `fizzbuzz` → Status: [✅]
 - 🛠️ Project: Directory Scanner CLI → Status: [ ]
 - 📝 Notes (your reflections):
-  - What went well?
-  - Where did you get stuck?
+  - What went well? 
+  learnt about isinstance, referesh on types and loops in python and creating a test harness. I think the test harness can be written to be more efficient as there is a repeative code.
+  - Where did you get stuck? Just some syntax checks with using some of the python functions like for loops and using range in loops.
   - What did you learn?
 - 💬 Feedback (from coach):  
   _[To be filled after review]_
