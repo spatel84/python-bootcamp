@@ -4,11 +4,16 @@ Focus: Functions, loops, conditionals
 Instructions: Complete each function below. Run pre-commit hooks to check formatting and linting.
 """
 
+
 def is_even(n: int) -> bool:
     """
     Returns True if n is even, False otherwise.
     """
     # TODO: Implement function
+    if not isinstance(n, int):
+        raise TypeError(f"is_even() expected int but got {type(n).__name__}")
+    else:
+        return n % 2 == 0
     pass
 
 
@@ -40,14 +45,28 @@ def test_is_even():
         (3, False),
         (0, True),
         (-4, True),
-        (-5, False)
+        (-5, False),
+        ("five", TypeError),
     ]
     passed = True
     for i, (input_val, expected) in enumerate(test_cases):
-        result = is_even(input_val)
-        if result != expected:
-            print(f"Test {i+1} FAILED: is_even({input_val}) -> {result}, expected {expected}")
-            passed = False
+        try:
+            result = is_even(input_val)
+            if result != expected:
+                print(
+                    f"Test {i+1} FAILED: is_even({input_val}) -> {result}, expected {expected}"
+                )
+                passed = False
+            else:
+                print(f"Test {i+1} passed ✅")
+        except Exception as e:
+            if isinstance(e, expected):
+                print(f"Test {i+1} passed ✅ (raised {expected.__name__})")
+            else:
+                print(
+                    f"Test {i+1} FAILED: raised {type(e).__name__}, expected {expected.__name__}"
+                )
+                passed = False
     if passed:
         print("All is_even tests passed ✅")
 
