@@ -127,9 +127,9 @@ def test_reverse_string():
                 )
                 passed = False
     if passed:
-        print("All is_even tests passed ✅")
+        print("All reverse_string tests passed ✅")
     else:
-        print("Not all is_even tests have passed check test_case number ⚠️")
+        print("Not all reverse_string tests have passed check test_case number ⚠️")
 
 
 if __name__ == "__main__":
