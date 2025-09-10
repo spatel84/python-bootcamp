@@ -4,6 +4,7 @@
 ### Day 1
 - 🥋 Katas:
   - `is_even` → Status: [✅]
+  → Find the maximum number (with error handling).  
   - `reverse_string` → Status: [✅]
   - `fizzbuzz` → Status: [✅]
 - 🛠️ Project: Directory Scanner CLI → Status: [ ]
@@ -19,9 +20,9 @@
 
 ### Day 2
 - 🥋 Katas:
-  - `count_vowels` → Status: [ ]
-  - `second_largest` → Status: [ ]
-  - `is_palindrome` → Status: [ ]
+  - `find_max` → Status: [✅]
+  - `count_vowels` → Status: [✅]
+  - `word_frequency` → Status: [✅]
 - 🛠️ Project: Extend scanner with JSON output → Status: [ ]
 - 📝 Notes:
   - What went well?
@@ -34,9 +35,9 @@
 
 ### Day 3
 - 🥋 Katas:
-  - `flatten` → Status: [ ]
-  - `factorial` → Status: [ ]
-  - `remove_duplicates` → Status: [ ]
+  - `unique_elements` → Status: [✅]
+  - `common_elements` → Status: [✅]
+  - `remove_duplicates` → Status: [✅] 
 - 🛠️ Project: Work on modularizing scanner → Status: [ ]
 - 📝 Notes:
 - 💬 Feedback:
@@ -45,9 +46,9 @@
 
 ### Day 4
 - 🥋 Katas:
-  - `most_common_char` → Status: [ ]
-  - `rotate_list` → Status: [ ]
-  - `merge_dicts` → Status: [ ]
+  - `is_palidrome` → Status: [✅]
+  - `factorial` → Status: [✅]
+  - `fibonacci` → Status: [✅]
 - 🛠️ Project: Continue scanner improvements → Status: [ ]
 - 📝 Notes:
 - 💬 Feedback:
