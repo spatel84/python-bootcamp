@@ -51,7 +51,8 @@ def word_frequency(text: str) -> dict[str, int]:
     words = text.lower().split(" ")
     count_of_words = {}
     for x in words:
-        count_of_words[x] = words.count(x)
+      count_of_words[x] = words.count(x)
+    
     return count_of_words
 
 

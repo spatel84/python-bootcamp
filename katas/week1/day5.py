@@ -39,7 +39,14 @@ def char_frequency(s: str) -> dict[str, int]:
     """
     # TODO: Implement function
     # raise NotImplementedError
-    # string to dictionary with a lo
+    # string to dictionary.
+    # Count the number of letters 
+    s = s.lower()
+    count_of_letter = {}
+    for x in s:
+	    count_of_letter[x] = s.count(x)
+
+    return count_of_letter
 
 
 def longest_word(sentence: str) -> str:
@@ -49,7 +56,17 @@ def longest_word(sentence: str) -> str:
     Example: "The quick brown fox" -> "quick"
     """
     # TODO: Implement function
-    raise NotImplementedError
+    # senetence = s.lower()
+    sentence = sentence.lower().split(" ")
+    longest = max(sentence,key=len)
+
+    return longest
+    #count_of_words = {}
+    #for x in sentence:
+	#    count_of_words[x] = sentence.count(x)
+    
+    #return max(count_of_words.keys())
+
 
 
 # -----------------------------
