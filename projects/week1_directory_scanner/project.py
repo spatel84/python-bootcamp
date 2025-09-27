@@ -7,6 +7,7 @@
 import os
 import re
 import subprocess
+import json
 
 
 def user_input():
@@ -23,7 +24,7 @@ def user_input():
 
 def list_directory_content(directory: str):
     print(directory)
-    content = subprocess.getoutput(f"ls {directory}")
+    content = subprocess.getoutput(f"ls -a {directory}")
     list_content = content.split()
 
     return list_content
@@ -61,7 +62,7 @@ def sort_by_size(directory: str):
     # Then add to a dictionary? but how do you do that
     current_dir_dict = {}
     current_dir_list = (
-        subprocess.getoutput(f"ls -lhS {directory} | awk '{{print $9,$5}}'")
+        subprocess.getoutput(f"ls -alhS {directory} | grep -v '^d' | awk '{{print $9,$5}}'")
         .strip()
         .splitlines()
     )
@@ -80,18 +81,14 @@ def sort_by_modified(directory: str):
     # add each awk line as a tuple in a list [(Readme.md':15MB),(Readme.md':15MB)....]
     # Then add to a dictionary? but how do you do that
     current_dir_dict = {}
-    current_dir_list = (
-        subprocess.getoutput(
-            f"ls -alhSTt {directory} | awk '{{print $10,$6" - "$7" - "$9" - "$8}}'"
-        )
-        .strip()
-        .splitlines()
-    )
+    # MacOS current_dir_list = (subprocess.getoutput(f"ls -alhSTt {directory} | awk '{{print $10,$6" - "$7" - "$9" - "$8}}'").strip().splitlines())
+    # test dir: /workspaces/python-bootcamp/projects/week1_directory_scanner
+    current_dir_list = (subprocess.getoutput(f"ls -halt --time-style=+%d-%m-%Y-%H:%M:%S {directory} | grep -v '^d' | awk '{{print $7,$6}}'").strip().splitlines())
     for x in current_dir_list:
         file = str(x).split()
         file_name = file[0]
-        file_size = file[1]
-        current_dir_dict[file_name] = file_size
+        file_modify = file[1]
+        current_dir_dict[file_name] = file_modify
 
     # print(current_dir_dict)
     return current_dir_dict
@@ -100,9 +97,23 @@ def sort_by_modified(directory: str):
 if __name__ == "__main__":
     # user_input()
     a = user_input()
-    # b = list_directory_content(a)
-    # print(b)
-    # c = content_of_directory(b)
-    # print(c)
-    sort_by_size(a)
-    sort_by_modified(a)
+    b = list_directory_content(a)
+    print(b)
+    c = content_of_directory(b)
+    print(c)
+    d = sort_by_size(a)
+    print(d)
+    e = sort_by_modified(a)
+    print(e)
+    
+    f = open("output.json", "w")
+    with open("output.json", "a") as f:
+        f.write(json.dumps(a, indent=4))
+    with open("output.json", "a") as f:
+        f.write(json.dumps(b, indent=4))
+    with open("output.json", "a") as f:
+        f.write(json.dumps(c, indent=4))
+    with open("output.json", "a") as f:
+        f.write(json.dumps(d, indent=4))
+    with open("output.json", "a") as f:
+        f.write(json.dumps(e, indent=4))
