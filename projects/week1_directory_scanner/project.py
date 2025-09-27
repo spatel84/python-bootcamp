@@ -55,10 +55,54 @@ def content_of_directory(content: list):
     # return dict_of_directory
 
 
+def sort_by_size(directory: str):
+    # return a dict in order of size of object i.e. {'Readme.md':15MB, 'file.pdf':100kb, 'myfiles.pdf':75kb}
+    # add each awk line as a tuple in a list [(Readme.md':15MB),(Readme.md':15MB)....]
+    # Then add to a dictionary? but how do you do that
+    current_dir_dict = {}
+    current_dir_list = (
+        subprocess.getoutput(f"ls -lhS {directory} | awk '{{print $9,$5}}'")
+        .strip()
+        .splitlines()
+    )
+    for x in current_dir_list:
+        file = str(x).split()
+        file_name = file[0]
+        file_size = file[1]
+        current_dir_dict[file_name] = file_size
+
+    # print(current_dir_dict)
+    return current_dir_dict
+
+
+def sort_by_modified(directory: str):
+    # return a dict in order of size of object i.e. {'Readme.md':15MB, 'file.pdf':100kb, 'myfiles.pdf':75kb}
+    # add each awk line as a tuple in a list [(Readme.md':15MB),(Readme.md':15MB)....]
+    # Then add to a dictionary? but how do you do that
+    current_dir_dict = {}
+    current_dir_list = (
+        subprocess.getoutput(
+            f"ls -alhSTt {directory} | awk '{{print $10,$6" - "$7" - "$9" - "$8}}'"
+        )
+        .strip()
+        .splitlines()
+    )
+    for x in current_dir_list:
+        file = str(x).split()
+        file_name = file[0]
+        file_size = file[1]
+        current_dir_dict[file_name] = file_size
+
+    # print(current_dir_dict)
+    return current_dir_dict
+
+
 if __name__ == "__main__":
     # user_input()
     a = user_input()
-    b = list_directory_content(a)
-    print(b)
-    c = content_of_directory(b)
-    print(c)
+    # b = list_directory_content(a)
+    # print(b)
+    # c = content_of_directory(b)
+    # print(c)
+    sort_by_size(a)
+    sort_by_modified(a)
