@@ -1,0 +1,35 @@
+"/workspaces/python-bootcamp"[
+    ".",
+    "..",
+    ".DS_Store",
+    ".git",
+    ".gitignore",
+    ".pre-commit-config.yaml",
+    ".venv",
+    ".vscode",
+    "README.md",
+    "journals",
+    "katas",
+    "projects",
+    "python-bootcamp"
+]{
+    ".": 2,
+    ".DS_Store": 1,
+    ".git": 1,
+    ".gitignore": 1,
+    ".yaml": 1,
+    ".venv": 1,
+    ".vscode": 1,
+    ".md": 1,
+    "dir": 4
+}{
+    ".DS_Store": "8.1K",
+    "README.md": "557",
+    ".pre-commit-config.yaml": "440",
+    ".gitignore": "29"
+}{
+    ".DS_Store": "12-09-2025-19:18:43",
+    "README.md": "07-09-2025-12:48:21",
+    ".gitignore": "07-09-2025-12:48:21",
+    ".pre-commit-config.yaml": "07-09-2025-12:48:21"
+}
