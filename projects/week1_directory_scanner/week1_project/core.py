@@ -1,3 +1,5 @@
+# core.py
+# This is the main code for the week1 project. The requirements are:
 # user is asked to enter a directory, default is the current working directory.
 # A function to ask the user to enter details about directory
 # A function to then ls the all the files and subdirectories
