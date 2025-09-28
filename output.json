@@ -1,39 +1,34 @@
-"/workspaces/python-bootcamp"[
+"/Users/shilpenpatel/Library/CloudStorage/OneDrive-Personal/Documents/Learning/Python/python-bootcamp"[
     ".",
     "..",
     ".DS_Store",
     ".git",
     ".gitignore",
     ".pre-commit-config.yaml",
-    ".venv",
     ".vscode",
-    "README.md",
     "journals",
     "katas",
     "output.json",
     "projects",
-    "python-bootcamp"
+    "python-bootcamp",
+    "README.md"
 ]{
     ".": 2,
     ".DS_Store": 1,
     ".git": 1,
     ".gitignore": 1,
     ".yaml": 1,
-    ".venv": 1,
     ".vscode": 1,
-    ".md": 1,
     "dir": 4,
-    ".json": 1
+    ".json": 1,
+    ".md": 1
 }{
-    ".DS_Store": "8.1K",
-    "output.json": "679",
-    "README.md": "557",
-    ".pre-commit-config.yaml": "440",
-    ".gitignore": "29"
+    ".DS_Store": "8.0K",
+    "output.json": "782B",
+    "README.md": "557B",
+    ".pre-commit-config.yaml": "440B",
+    ".gitignore": "29B"
 }{
-    "output.json": "27-09-2025-19:48:44",
-    ".DS_Store": "12-09-2025-19:18:43",
-    "README.md": "07-09-2025-12:48:21",
-    ".gitignore": "07-09-2025-12:48:21",
-    ".pre-commit-config.yaml": "07-09-2025-12:48:21"
+    "ls:": "unrecognized",
+    "usage:": "ls"
 }

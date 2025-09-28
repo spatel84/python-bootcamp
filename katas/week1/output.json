@@ -1,0 +1,49 @@
+{
+    "directory": "/Users/shilpenpatel/Library/CloudStorage/OneDrive-Personal/Documents/Learning/Python/python-bootcamp/katas/week1",
+    "content": [
+        "day6.py",
+        "day2.py",
+        "day4-recommendation.py",
+        "day3.py",
+        "day2-recommended.py",
+        "day5-recommendation.py",
+        "day3-recommendation.py",
+        "day6-recommendation.py",
+        "output.json",
+        "day4.py",
+        "day5.py",
+        "day1.py"
+    ],
+    "counts": {
+        ".py": 11,
+        ".json": 1
+    },
+    "sorted_by_size": {
+        "day1.py": 4980,
+        "day2.py": 3823,
+        "day4.py": 3795,
+        "day2-recommended.py": 3704,
+        "day6.py": 3598,
+        "day5.py": 3457,
+        "day3.py": 3244,
+        "day6-recommendation.py": 3208,
+        "day3-recommendation.py": 2830,
+        "day4-recommendation.py": 1028,
+        "day5-recommendation.py": 922,
+        "output.json": 777
+    },
+    "sorted_by_modified": {
+        "output.json": 1759072773.6348982,
+        "day6-recommendation.py": 1758151209.7826257,
+        "day6.py": 1758151074.0581505,
+        "day5.py": 1758142597.3464887,
+        "day5-recommendation.py": 1758142597.3463526,
+        "day2.py": 1758142597.3462734,
+        "day4-recommendation.py": 1757538147.972396,
+        "day4.py": 1757537692.5239434,
+        "day3-recommendation.py": 1757456549.1985312,
+        "day3.py": 1757456317.4640229,
+        "day2-recommended.py": 1757379261.479382,
+        "day1.py": 1757280870.519007
+    }
+}
