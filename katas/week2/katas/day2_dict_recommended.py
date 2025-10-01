@@ -3,17 +3,15 @@ Day 2 – Dicts & Sets
 Focus: Practice dict and set operations.
 """
 
+from collections import Counter
+
 
 def word_frequency(words: list) -> dict:
     """
     Count the frequency of each word in the list.
     Example: ["apple", "banana", "apple"] -> {"apple": 2, "banana": 1}
     """
-    # TODO: implement
-    word_count = {}
-    for x in words:
-        word_count[x] = words.count(x)
-    return word_count
+    return Counter(words)  # Clean, efficient, Pythonic
 
 
 def unique_items(seq: list) -> set:
@@ -21,12 +19,7 @@ def unique_items(seq: list) -> set:
     Return a set of unique items from the list.
     Example: [1,2,2,3] -> {1,2,3}
     """
-    # TODO: implement
-    unique_set = set()
-    for x in seq:
-        if x not in unique_set:
-            unique_set.add(x)
-    return unique_set
+    return set(seq)  # Using set directly
 
 
 def invert_dict(d: dict) -> dict:
@@ -35,11 +28,7 @@ def invert_dict(d: dict) -> dict:
     Example: {"a": 1, "b": 2} -> {1: "a", 2: "b"}
     Assumes values are unique and hashable.
     """
-    # TODO: implement
-    dict_swap = {}
-    for x, y in d.items():
-        dict_swap[y] = x
-    return dict_swap
+    return {v: k for k, v in d.items()}  # Dict comprehension
 
 
 if __name__ == "__main__":
